@@ -48,6 +48,8 @@ text-histo [options] file
 - `--char CHAR`: Character(s) used to draw histogram bars (default: █)
 - `--width WIDTH`: Width of the histogram in characters (default: 50)
 - `--no-binning`: Disable automatic binning for numeric data
+- `--counts`: Display counts at the end of the histogram bars
+- `--counts-col`: Display counts in a counts column
 
 ## Examples
 
@@ -63,18 +65,18 @@ Output:
 ```
 sample_numeric
 =================================================
-Value      | Counts     | Histogram
-----------+------------+--------------------------------------------------
-12-19     | 1          | █
-20-27     | 7          | ███████
-28-35     | 3          | ███
-36-43     | 0          | 
-44-51     | 4          | ████
-52-59     | 3          | ███
-60-67     | 4          | ████
-68-75     | 0          | 
-76-83     | 4          | ████
-84-91     | 4          | ████
+Value     | Histogram
+----------+--------------------------------------------------
+12-19     | █
+20-27     | ███████
+28-35     | ███
+36-43     | 
+44-51     | ████
+52-59     | ███
+60-67     | ████
+68-75     | 
+76-83     | ████
+84-91     | ████
 ```
 
 ### Categorical Data
@@ -87,15 +89,15 @@ Output:
 ```
 sample_categorical
 =================================================
-Value      | Counts     | Histogram
-----------+------------+--------------------------------------------------
-apple     | 7          | ███████████████████████████████████████
-banana    | 6          | █████████████████████████████████
-grape     | 4          | ████████████████████
-kiwi      | 3          | ███████████████
-mango     | 1          | █████
-orange    | 6          | █████████████████████████████████
-pear      | 2          | ██████████
+Value     | Histogram
+----------+--------------------------------------------------
+apple     | ███████████████████████████████████████
+banana    | █████████████████████████████████
+grape     | ████████████████████
+kiwi      | ███████████████
+mango     | █████
+orange    | █████████████████████████████████
+pear      | ██████████
 ```
 
 ### Custom Bar Character
