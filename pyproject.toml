@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "text-histo"
+version = "0.1.0"
+description = "A simple text-based histogram generator"
+readme = "README.md"
+authors = [
+    {name = "Original Author", email = "author@example.com"}
+]
+license = {text = "MIT"}
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+text-histo = "text_histo.text_histogram:main"
+
+[tool.setuptools]
+packages = ["text_histo"]
